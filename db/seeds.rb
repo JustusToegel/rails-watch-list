@@ -21,5 +21,4 @@ movies.each do |movie_hash|
     overview: movie_hash['overview'],
     rating: movie_hash['vote_average'].round.to_i
   )
-  p movie.save!
 end
