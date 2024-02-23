@@ -12,6 +12,7 @@ gem "simple_form"
 gem "sassc-rails" # Uncomment this line
 
 gem "dotenv-rails"
+gem "cloudinary"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
