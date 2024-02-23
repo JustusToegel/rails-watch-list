@@ -1,15 +1,22 @@
-<h2> <%= @list.name %></h2>
-
-<%= link_to "Add a movie to this list", new_list_bookmark_path(@list) %>
-
-
-<div class='row justify-content-center'>
-  <% @list.movies.each do |movie| %>
-    <div class="col-4">
-      <%= image_tag movie.poster_url, height: 200 %>
-      <h4><%= movie.title %></h4>
-    </div>
-  <% end %>
+<div class = "container">
+<div class="d-flex flex-row justify-content-around align-items-center bd-highlight mb-3">
+  <div class="p-2 bd-highlight">
+    <h2><%= @list.name %></h2>
+  </div>
+  <div class="p-2 bd-highlight">
+    <%= link_to "Add a movie to this list", new_list_bookmark_path(@list), class: "btn btn-gradient" %>
+  </div>
 </div>
 
+<% @list.movies.each do |movie| %>
+  <div class="card-product">
+    <img src= "<%= movie.poster_url %>"/>
+      <div class="card-product-infos">
+        <h2><%= movie.title %></h2>
+        <p> <%= movie.overview %> </p>
+      </div>
+  </div>
+<% end %>
+
 <p><%= link_to "back to -List of lists-", lists_path %></p>
+</div>

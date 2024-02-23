@@ -1,3 +1,4 @@
+<div class = "container">
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
@@ -5,3 +6,4 @@
 <% end %>
 
 <p><%= link_to "back to -List of lists-", lists_path %></p>
+</div>
